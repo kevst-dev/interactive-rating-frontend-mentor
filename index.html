@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Title -->
+  <title>Interactive rating component</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <div id="card__rating" class="card">
+      <img class="card__icon" src="images/icon-star.svg">
+      <h2 class="card__title">How did we do?</h2>
+      <p class="card__paragraph">
+        Please let us know how we did with your support request. All feedback
+        is appreciated to help us improve our offering!
+      </p>
+      <ul class="card__rating-scale">
+        <li onclick="clickScale(this)" class="card__value-scale">1</li>
+        <li onclick="clickScale(this)" class="card__value-scale">2</li>
+        <li onclick="clickScale(this)" class="card__value-scale">3</li>
+        <li onclick="clickScale(this)" class="card__value-scale">4</li>
+        <li onclick="clickScale(this)" class="card__value-scale">5</li>
+      </ul>
+      <button onclick="submit()" class="card--submit">Submit</button>
+    </div>
+    <div id="card__tank-you" class="card card__thank-you card--hide">
+      <img class="card__img" src="images/illustration-thank-you.svg">
+      <div class="card__selected">
+        <p id="selected-scale" class="selected-scale">
+          You selected 4 out of 5
+        </p>
+      </div>
+      <h2 class="card__title">Thank you!</h2>
+      <p class="card__paragraph">
+        We appreciate you taking the time to give a rating. if you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
+    </div>
+  </main>
+  <script src="js/index.js"></script>
+</body>
+</html>
